@@ -13,15 +13,21 @@ namespace GUI_Figures
         protected int xCentre;
         protected int yCentre;
 
-        abstract protected void DrawBlack();
-        abstract protected void HideDrawingBackGround();
+        public Figure(int x,int y)
+        {
+            xCentre = x;
+            yCentre = y;
+        }
+
+        abstract public void DrawBlack(Graphics g);
+        abstract public void HideDrawingBackGround(Graphics g);
 
         protected void MoveRight(Graphics g,int step)
         {
-            this.HideDrawingBackGround();
+            this.HideDrawingBackGround(g);
             xCentre += step;
             yCentre += step;
-            this.DrawBlack();
+            this.DrawBlack(g);
         }
     }
 }

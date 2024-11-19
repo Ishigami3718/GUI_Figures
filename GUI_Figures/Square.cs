@@ -9,6 +9,11 @@ namespace GUI_Figures
     internal class Square:Figure
     {
         private int sideLength;
+
+        public Square(int x, int y,int sL) : base(x, y)
+        {
+            sideLength = sL;
+        }
         public override void DrawBlack(Graphics g)
         {
             g.DrawRectangle(new Pen(Color.Black),xCentre,yCentre,sideLength,sideLength);

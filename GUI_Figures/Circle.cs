@@ -9,6 +9,11 @@ namespace GUI_Figures
     internal class Circle:Figure
     {
         private int radius;
+
+        public Circle(int x, int y,int r) : base(x, y)
+        {
+            radius = r;
+        }
         public override void DrawBlack(Graphics g)
         {
             g.DrawEllipse(new Pen(Color.Black), xCentre, yCentre, radius, radius);
