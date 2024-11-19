@@ -4,7 +4,10 @@ namespace GUI_Figures
 {
     public partial class Form1 : Form
     {
-
+        private Figure circle = new Circle(75,75,40);
+        private Figure square = new Square(100, 50, 50);
+        private Figure rhomb = new Rhomb(50, 100, 50,80);
+        private int step = 0;
         public Form1()
         {
             InitializeComponent();
@@ -12,27 +15,58 @@ namespace GUI_Figures
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Graphics g = this.CreateGraphics();
             switch(comboBox1.Text)
             {
-                case "Circle": break;
-                case "Square": break;
-                case "Rhomb": break;
+                case "Circle": circle.DrawBlack(g);
+                    break;
+                case "Square": square.DrawBlack(g);
+                    break;
+                case "Rhomb": rhomb.DrawBlack(g);
+                    break;
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Graphics g = this.CreateGraphics();
+            switch (comboBox1.Text)
+            {
+                case "Circle":
+                    circle.HideDrawingBackGround(g);
+                    break;
+                case "Square":
+                    square.HideDrawingBackGround(g);
+                    break;
+                case "Rhomb":
+                    rhomb.HideDrawingBackGround(g);
+                    break;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            timer1.Start();
+            Graphics g = this.CreateGraphics();
+            step += 5;
+            switch (comboBox1.Text)
+            {
+                case "Circle":
+                    circle.MoveRight(g, step);
+                    break;
+                case "Square":
+                    square.MoveRight(g, step);
+                    break;
+                case "Rhomb":
+                    rhomb.MoveRight(g, step);
+                    break;
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            timer1.Stop();
+            step = 0;
         }
     }
 }
