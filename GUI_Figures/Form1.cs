@@ -7,7 +7,7 @@ namespace GUI_Figures
         private Figure circle = new Circle(75, 75, 40);
         private Figure square = new Square(100, 50, 50);
         private Figure rhomb = new Rhomb(50, 100, 50, 80);
-        private int step = 0;
+        private int step = 1;
         public Form1()
         {
             InitializeComponent();
@@ -55,13 +55,13 @@ namespace GUI_Figures
         private void button4_Click(object sender, EventArgs e)
         {
             timer1.Stop();
-            step = 0;
+            //step = 0;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             Graphics g = this.CreateGraphics();
-            step += 5;
+           // step++;
             switch (comboBox1.Text)
             {
                 case "Circle":
