@@ -76,6 +76,10 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
+            // 
             // button4
             // 
             button4.Location = new Point(681, 208);

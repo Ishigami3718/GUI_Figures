@@ -22,11 +22,10 @@ namespace GUI_Figures
         abstract public void DrawBlack(Graphics g);
         abstract public void HideDrawingBackGround(Graphics g);
 
-        protected void MoveRight(Graphics g,int step)
+        public void MoveRight(Graphics g,int step)
         {
             this.HideDrawingBackGround(g);
             xCentre += step;
-            yCentre += step;
             this.DrawBlack(g);
         }
     }
