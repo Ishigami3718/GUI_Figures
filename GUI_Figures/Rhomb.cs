@@ -11,6 +11,11 @@ namespace GUI_Figures
         private int horDiagLen;
         private int vertDiagLen;
 
+        public Rhomb(int x,int y,int hDL,int vDL) : base(x, y)
+        {
+            horDiagLen = hDL;
+            vertDiagLen = vDL;
+        }
         public override void DrawBlack(Graphics g)
         {
             g.DrawPolygon(new Pen(Color.Black),new Point[] {new Point(xCentre-horDiagLen/2,yCentre), 
