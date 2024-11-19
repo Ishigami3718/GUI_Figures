@@ -10,7 +10,7 @@ namespace GUI_Figures
     {
         private int radius;
 
-        public Circle(int x, int y,int r) : base(x, y)
+        public Circle(int x, int y,int r) : base(x-r/2, y-r/2)
         {
             radius = r;
         }

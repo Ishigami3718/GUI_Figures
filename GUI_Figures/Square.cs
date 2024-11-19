@@ -10,7 +10,7 @@ namespace GUI_Figures
     {
         private int sideLength;
 
-        public Square(int x, int y,int sL) : base(x, y)
+        public Square(int x, int y,int sL) : base(x-sL/2,y-sL/2)
         {
             sideLength = sL;
         }
