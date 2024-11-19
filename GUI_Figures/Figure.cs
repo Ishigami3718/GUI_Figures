@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace GUI_Figures
 {
@@ -11,19 +13,15 @@ namespace GUI_Figures
         protected int xCentre;
         protected int yCentre;
 
-        protected void DrawBlack()
+        abstract protected void DrawBlack();
+        abstract protected void HideDrawingBackGround();
+
+        protected void MoveRight(Graphics g,int step)
         {
-
-        }
-
-        protected void HideDrawingBackGround()
-        {
-
-        }
-
-        protected void MoveRight()
-        {
-
+            this.HideDrawingBackGround();
+            xCentre += step;
+            yCentre += step;
+            this.DrawBlack();
         }
     }
 }
