@@ -6,7 +6,24 @@ using System.Threading.Tasks;
 
 namespace GUI_Figures
 {
-    internal class Figure
+    internal abstract class Figure
     {
+        protected int xCentre;
+        protected int yCentre;
+
+        protected void DrawBlack()
+        {
+
+        }
+
+        protected void HideDrawingBackGround()
+        {
+
+        }
+
+        protected void MoveRight()
+        {
+
+        }
     }
 }
