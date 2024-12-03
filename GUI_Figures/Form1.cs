@@ -39,12 +39,15 @@ namespace GUI_Figures
             {
                 case "Circle":
                     circle.HideDrawingBackGround(g);
+                    circle = new Circle(175, 175, 40);
                     break;
                 case "Square":
                     square.HideDrawingBackGround(g);
+                    square = new Square(100, 50, 50);
                     break;
                 case "Rhomb":
                     rhomb.HideDrawingBackGround(g);
+                    rhomb = new Rhomb(50, 100, 50, 80);
                     break;
             }
         }
@@ -57,12 +60,6 @@ namespace GUI_Figures
         private void button4_Click(object sender, EventArgs e)
         {
             timer1.Stop();
-             circle = new Circle(175, 175, 40);
-        // private Figure circle = new Circle(0, 0, 40);
-         square = new Square(100, 50, 50);
-        // private Figure square = new Square(0, 0, 50);
-         rhomb = new Rhomb(50, 100, 50, 80);
-        //step = 0;
     }
 
         private void timer1_Tick(object sender, EventArgs e)
