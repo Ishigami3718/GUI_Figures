@@ -4,10 +4,10 @@ namespace GUI_Figures
 {
     public partial class Form1 : Form
     {
-        //private Figure circle = new Circle(75, 75, 40);
-        private Figure circle = new Circle(0, 0, 40);
-        //private Figure square = new Square(100, 50, 50);
-        private Figure square = new Square(0, 0, 50);
+        private Figure circle = new Circle(175, 175, 40);
+       // private Figure circle = new Circle(0, 0, 40);
+        private Figure square = new Square(100, 50, 50);
+       // private Figure square = new Square(0, 0, 50);
         private Figure rhomb = new Rhomb(50, 100, 50, 80);
         private int step = 1;
         public Form1()
@@ -57,8 +57,13 @@ namespace GUI_Figures
         private void button4_Click(object sender, EventArgs e)
         {
             timer1.Stop();
-            //step = 0;
-        }
+             circle = new Circle(175, 175, 40);
+        // private Figure circle = new Circle(0, 0, 40);
+         square = new Square(100, 50, 50);
+        // private Figure square = new Square(0, 0, 50);
+         rhomb = new Rhomb(50, 100, 50, 80);
+        //step = 0;
+    }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
